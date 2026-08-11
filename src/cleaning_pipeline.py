@@ -439,10 +439,17 @@ class Preprocess:
 
 
 if __name__ == "__main__":
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+    DATA_DIR = os.path.join(BASE_DIR, "DataSets")
+    OUTPUT_DIR = os.path.join(BASE_DIR, "Outputs")
+
     pipeline = Preprocess(
-        data_dir="/mnt/user-data/uploads",
-        output_dir="/mnt/user-data/outputs",
+        data_dir=DATA_DIR,
+        output_dir=OUTPUT_DIR,
     )
+
     final_df = pipeline.run_all()
+
     print("\nFinal dataset preview:")
     print(final_df.head())

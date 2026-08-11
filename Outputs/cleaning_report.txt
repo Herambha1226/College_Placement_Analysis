@@ -1,0 +1,14 @@
+DATA CLEANING REPORT
+======================================================================
+
+[student_records] Dropped duplicate column 'company_academic_eligible.1' (identical to 'company_academic_eligible')
+[student_records] Dropped duplicate column 'company_skill_fit_score.1' (identical to 'company_skill_fit_score')
+[student_records] Dropped duplicate column 'company_match_status.1' (identical to 'company_match_status')
+[final_dataset] Validated total_skill_gap against fresh recompute: 0 mismatches out of 5000 rows
+
+======================================================================
+FINAL DATASET SUMMARY
+final_student_dataset.xlsx: 5000 rows x 179 columns
+Unique students (student_id): 5000
+Unique real students (source_student_id): 1183
+Placement rate: 44.2%

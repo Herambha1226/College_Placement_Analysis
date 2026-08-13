@@ -1,34 +1,3 @@
-"""
-preprocess.py
-=================================================================
-Cleaning pipeline for the Student Placement / MNC-Matching data.
-
-Datasets handled
------------------
-  1. SRC_MNC_Criteria.xlsx        - per-company eligibility & skill minimums
-  2. SRC_Role_Requirements.xlsx   - per-role skill minimums
-  3. SRC_Skill_Gaps.xlsx          - long-format (student x skill) gap records
-  4. SRC_Student_Placement.xlsx   - 1 row per REAL student (1,200 students)
-  5. student_records.xlsx         - 1 row per (student, synthetic-variant)
-                                     already merged with role/company/skill-gap
-                                     features (5,000 rows) -> used as the base
-                                     for the final ML-ready dataset.
-
-Output (written to output_dir, default /mnt/user-data/outputs)
------------------------------------------------------------------
-  cleaned_mnc_criteria.xlsx
-  cleaned_role_requirements.xlsx
-  cleaned_skill_gaps.xlsx
-  cleaned_student_placement.xlsx      <- 1 row per real student (master lookup)
-  final_student_dataset.xlsx          <- 1 row per record, ML-ready (THE deliverable)
-  cleaning_report.txt                 <- summary of what was found/fixed
-
-Usage
------
-    pipeline = Preprocess(data_dir="DataSets", output_dir="Outputs")
-    pipeline.run_all()
-"""
-
 import os
 import numpy as np
 import pandas as pd
